@@ -32,7 +32,7 @@ class _ButtonIconState extends State<ButtonIcon> {
       child: Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: (tapDown) ? HSVColor.fromColor(Theme.of(context).accentColor).withValue(0.8).toColor() : Theme.of(context).accentColor,
+          color: (tapDown) ? HSLColor.fromColor(Theme.of(context).accentColor).withLightness(0.2).toColor() : Theme.of(context).accentColor,
           shape: BoxShape.circle
         ),
         child: widget.icon

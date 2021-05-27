@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:snake_flutter/snake/game_page.dart';
+import 'package:snake_flutter/home_page/home_page.dart';
+import 'package:snake_flutter/game_page/game_page.dart';
 import 'package:snake_flutter/theme.dart';
 
 void main() {
@@ -12,7 +13,11 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Snake Flutter',
       theme: theme,
-      home: GamePage(),
+      routes: {
+        "home": (ctx) => HomePage(),
+        "game": (ctx) => GamePage(),
+      },
+      initialRoute: "home",
     );
   }
 }

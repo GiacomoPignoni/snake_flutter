@@ -1,9 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:snake_flutter/snake/game_state.dart';
+import 'package:snake_flutter/game_page/game_state.dart';
 import 'package:snake_flutter/widget/icon_button.dart';
-import 'package:snake_flutter/snake/snake.dart';
+import 'package:snake_flutter/game_page/snake.dart';
 
 class GamePage extends StatelessWidget {
   final double buttonSize = 35;
@@ -15,7 +15,7 @@ class GamePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Provider(
-          create: (ctx) => GameState(),
+          create: (ctx) => GameState(ctx),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
