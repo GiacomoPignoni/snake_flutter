@@ -7,9 +7,7 @@ class GameState {
   final BuildContext _context;
 
   final int gridSize = 20;
-
   bool pause = false;
-
   Offset dir = Offset(0, 0);
 
   List<Offset> snake = [

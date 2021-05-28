@@ -9,6 +9,26 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
+              child: RichText(
+                text: TextSpan(
+                  text: "S",
+                  style: TextStyle(
+                    fontSize: 40,
+                    color: Theme.of(context).accentColor
+                  ),
+                  children: [
+                    TextSpan(
+                      text: "nake Flutter",
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor
+                      )
+                    )
+                  ]
+                ),
+              ),
+            ),
+            Divider(),
+            Center(
               child: ElevatedButton(
                 onPressed: () => Navigator.of(context).pushReplacementNamed("game"),
                 child: Text("Play")
